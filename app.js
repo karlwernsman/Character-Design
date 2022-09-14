@@ -61,8 +61,11 @@ function displayPhrases() {
 
 addButton.addEventListener('click', () => {
     // > Get the phrase from the value of the phrase input
+    const phrase = phraseInput.value;
     // > Use ".push" to add the phrase to the end of the character phrases array
+    character.phrases.push(phrase);
     // > Re-display the phrases
+    displayPhrases();
 
     // reset the input
     phraseInput.value = '';
